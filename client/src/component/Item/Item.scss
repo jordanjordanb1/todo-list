@@ -1,3 +1,46 @@
 .todo__item {
     padding: 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover .todo__item__trash {
+        visibility: visible;
+    }
+}
+
+.todo__item__last {
+    border: none;
+}
+
+.todo__item_content {
+    &:focus {
+        outline: none;
+    }
+}
+
+.todo__item__icon {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.75);
+    }
+}
+
+.todo__item__icon__done {
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.75);
+    }
+}
+
+.todo__item__trash {
+    color: rgb(202, 9, 9);
+    cursor: pointer;
+    visibility: hidden;
+
+    &:hover {
+        color: rgb(255, 9, 9);
+    }
 }
