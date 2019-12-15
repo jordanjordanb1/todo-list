@@ -1,8 +1,16 @@
-import React from "react";
+import React, { PureComponent } from "react";
+import { Provider } from "react-redux";
+import { ConfigureStore } from "./redux/ConfigureStore";
 import "./App.scss";
 
-const App: React.FC = () => {
-  return <div className="App"></div>;
-};
+const store: any = ConfigureStore();
 
-export default App;
+export default class App extends PureComponent {
+    render() {
+        return (
+            <Provider store={store}>
+                <div className="App"></div>
+            </Provider>
+        );
+    }
+}
