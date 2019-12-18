@@ -1,10 +1,9 @@
 .todo__item {
-    padding: 20px;
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     &:hover .todo__item__trash {
-        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -13,6 +12,10 @@
 }
 
 .todo__item_content {
+    background: 0;
+    border: none;
+    width: 100%;
+
     &:focus {
         outline: none;
     }
@@ -38,7 +41,11 @@
 .todo__item__trash {
     color: rgb(202, 9, 9);
     cursor: pointer;
-    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    transition: all 0.1s;
 
     &:hover {
         color: rgb(255, 9, 9);
