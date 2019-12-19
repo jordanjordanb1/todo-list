@@ -1,5 +1,5 @@
 export interface item {
-    _id?: number;
+    _id?: any;
     value: string;
     done: boolean;
 }

@@ -12,7 +12,7 @@ export default function Item({
     checkItem,
     editItem
 }: {
-    _id: number;
+    _id: any;
     value: string;
     done: boolean;
     last?: boolean;
