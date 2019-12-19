@@ -1,10 +1,13 @@
 const express = require("express"),
   path = require("path"),
-  logger = require("morgan");
+  logger = require("morgan"),
+  helmet = require('helmet')
 
 const indexRouter = require("./routes/index");
 
 const app = express();
+
+app.use(helmet())
 
 app.use(logger("dev"));
 app.use(express.json({ limit: "12mb" }));
