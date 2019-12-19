@@ -13,12 +13,7 @@ import {
     editTodoItem,
     markItemDone
 } from "../redux/ActionCreators";
-
-interface item {
-    _id: number;
-    value: string;
-    done: boolean;
-}
+import { item } from "../interfaces/item.interface";
 
 // Required for TypeScript
 interface Props {

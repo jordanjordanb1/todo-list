@@ -1,10 +1,5 @@
 import * as ActionTypes from "./ActionTypes";
-
-interface item {
-    _id: number;
-    value: string;
-    done: boolean;
-}
+import { item } from "../interfaces/item.interface";
 
 // Loads items from LocalStorage and puts them in store
 export const loadTodoItems = () => (dispatch: any): boolean => {
