@@ -7,7 +7,7 @@ import "./Todo.scss";
 import Item from "./Item/Item";
 import NewItem from "./NewItem/NewItem";
 import {
-    loadTodoItems,
+    refreshTodoItems,
     addTodoItem,
     deleteTodoItem,
     editTodoItem,
@@ -18,7 +18,7 @@ import { item } from "../interfaces/item.interface";
 // Required for TypeScript
 interface Props {
     todo_items: any;
-    loadToDoItems: any;
+    refreshToDoItems: any;
     addTodoItem: any;
     deleteTodoItem: any;
     editTodoItem: any;
@@ -27,7 +27,7 @@ interface Props {
 
 class Main extends PureComponent<Props> {
     componentDidMount() {
-        this.props.loadToDoItems(); // Loads all the items from LocalStorage
+        this.props.refreshToDoItems(); // Loads all the items from LocalStorage
     }
 
     // Deletes item after confirming
@@ -152,7 +152,7 @@ const mapStateToProps = (state: any) => ({
         todo_items: state.todo.todo_items
     }),
     mapDispatchToProps = (dispatch: any) => ({
-        loadToDoItems: () => dispatch(loadTodoItems()), // Runs instantly
+        refreshToDoItems: () => dispatch(refreshTodoItems()), // Runs instantly
         addTodoItem: (items: any) => dispatch(addTodoItem(items)),
         deleteTodoItem: (_id: number) => dispatch(deleteTodoItem(_id)),
         editTodoItem: (_id: number, content: string) =>
