@@ -62,7 +62,7 @@ class Main extends PureComponent<Props> {
         return true;
     };
 
-    // Renders all items that came from LocalStorage => Redux store
+    // Renders all items that came from IndexedDB => Redux store
     renderItems = () => {
         const { todo_items }: any = this.props;
 
