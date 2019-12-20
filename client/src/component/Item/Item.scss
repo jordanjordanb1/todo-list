@@ -2,8 +2,10 @@
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
+    animation: show 1s forwards;
+
     &:hover .todo__item__trash {
-        opacity: 1;
+        animation: show 1s forwards;
     }
 }
 
@@ -24,6 +26,7 @@
 .todo__item__icon {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.3);
+    transition: color 0.5s;
 
     &:hover {
         color: rgba(0, 0, 0, 0.75);
@@ -32,6 +35,7 @@
 
 .todo__item__icon__done {
     cursor: pointer;
+    transition: color 0.5s;
 
     &:hover {
         color: rgba(0, 0, 0, 0.75);
