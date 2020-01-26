@@ -7,3 +7,4 @@ I've used the following technologies in this project:
 -   NodeJS
 -   Express.js
 -   IndexedDB
+-   TypeScript
